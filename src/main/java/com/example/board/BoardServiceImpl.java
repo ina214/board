@@ -43,5 +43,21 @@ public class BoardServiceImpl implements BoardService {
 
     return "view";
   }
+  // 조회수
+  @Override
+  public String postReadnum(int id)
+  {
+    mapper.postReadnum(id);
+    return "redirect: view?id="+id;
+  }
+
+  // 게시글 목록
+  @Override
+  public String list(int id, Model model)
+  {
+    BoardDto boardDto=mapper.view(id);
+    model.addAttribute("boardDto", boardDto);
+    return "list";
+  }
 
 }

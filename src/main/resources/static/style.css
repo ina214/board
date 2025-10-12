@@ -73,12 +73,15 @@ table {
   resize: none;
 }
 
-.btnBox {
-  margin-top: 20px;
+.btnBox,
+.btnBox div {
   display: flex;
   align-items: center;
   justify-content: end;
   gap: 8px;
+}
+.btnBox {
+  margin-top: 20px;
 }
 .btnBox a,
 .btnBox input[type=button],
@@ -91,13 +94,20 @@ table {
   text-decoration: none;
   border: none;
   font-size: 15px;
+  display: inline-block;
 }
-.btnBox *:nth-child(odd) {
+.btnBox a:nth-child(odd),
+.btnBox input[type=button]:nth-child(odd),
+.btnBox input[type=submit]:nth-child(odd) {
   background: #ccc;
   color: #222;
 }
-.btnBox *:nth-child(even),
-.btnBox *:only-child {
+.btnBox a:nth-child(even),
+.btnBox input[type=button]:only-child,
+.btnBox input[type=submit]:nth-child(even),
+.btnBox a:only-child,
+.btnBox input[type=button]:nth-child(even),
+.btnBox input[type=submit]:only-child {
   background: #222;
   color: #fff;
 }

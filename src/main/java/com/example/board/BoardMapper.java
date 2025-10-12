@@ -1,5 +1,7 @@
 package com.example.board;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
@@ -12,4 +14,6 @@ public interface BoardMapper {
 
   public int writeOk(BoardDto boardDto);
   public BoardDto view(int id);
+  public void postReadnum(int id);
+  public List<BoardDto> list(int id);
 }

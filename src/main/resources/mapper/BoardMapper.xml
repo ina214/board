@@ -14,4 +14,17 @@
     select * from board
     where id=#{id}
   </select>
+
+  <!-- 조회수 -->
+  <update id="postReadnum">
+    update board
+    set readnum=readnum+1
+    where id=#{id}
+  </update>
+
+  <!-- 글목록 -->
+  <select id="list" resultType="com.example.board.BoardDto">
+    select * from board
+    order by id desc
+  </select>
 </mapper>

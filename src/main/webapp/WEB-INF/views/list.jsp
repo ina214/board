@@ -46,10 +46,10 @@
         </thead>
         <tbody>
           <tr>
-            <td>제목 보여주세요</td>
-            <td>아무개</td>
-            <td>2025-00-00</td>
-            <td>00</td>
+            <td>${boardDto.title}</td>
+            <td>${boardDto.name}</td>
+            <td><fmt:formatDate value="${writedayDate}" pattern="yyyy-MM-dd" /></span></td>
+            <td>${boardDto.readnum}</td>
           </tr>
         </tbody>
       </table>

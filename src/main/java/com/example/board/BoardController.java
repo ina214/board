@@ -24,11 +24,6 @@ public class BoardController {
       return "redirect:/list";
   }
   
-  @GetMapping("/list")
-  public String list() {
-      return "/list";
-  }
-
   // 게시판 글 작성
   @GetMapping("/write")
   public String write() {   // 요청할 내용이 없음
@@ -49,5 +44,16 @@ public class BoardController {
   public String view(@RequestParam("id") int id, Model model)
   {
     return service.view(id, model);
+  }
+  // 조회수
+  @GetMapping("/postReadnum")
+  public String postReadnum(@RequestParam("id") int id) {
+      return service.postReadnum(id);
+  }
+  
+  // 게시판 목록
+  @GetMapping("/list")
+  public String list(@RequestParam("id") int id, Model model) {
+      return service.list(id, model);
   }
 }

@@ -44,6 +44,9 @@
     padding: 20px 10px;
     min-height: 500px;
   }
+  .btnBox {
+    justify-content: space-between;
+  }
 </style>
 </head>
 <body>
@@ -64,8 +67,11 @@
     </div>
     <div class="btnBox">
       <a href="/list">글 목록</a>
-      <a href="/list">수정</a>
-      <a href="/list">삭제</a>
+      <div>
+        <a href="/list">삭제</a>
+        <input type="button" value="삭제" onclick="location='/delPost?id={boardDto.id}'">
+        <a href="/modify?id={boardDto.id}">수정</a>
+      </div>
     </div>
   </div>
 </body>
