@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+body, * {
+  margin: 0;
+  padding: 0;
+}
+ul, ol {
+  list-style: none;
+}
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.inner {
+  margin: 0 auto;
+  padding: 100px;
+  width: 800px;
+}
+
+.pageTop {
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.tblBox {
+  padding: 15px 0;
+  background: #f8f8f8;
+  border-top: 2px solid #000;
+  border-bottom: 1px solid #ccc;
+}
+.tblBox th,
+.tblBox td {
+  padding: 5px;
+  line-height: 40px;
+  color: #222;
+  font-size: 15px;
+  font-weight: 400;
+}
+.tblBox tbody th {
+  vertical-align: top;
+  text-align: left;
+}
+.tblBox input[type=text],
+.tblBox input[type=password],
+.tblBox textarea,
+.tblBox select {
+  padding: 3px 5px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  outline: none;
+  display: block;
+  font-family: inherit;
+}
+/* .tblBox input[type=text],
+.tblBox input[type=password] {
+
+} */
+.tblBox select {
+  width: fit-content;
+}
+.tblBox textarea {
+  width: 100%;
+  height: 200px;
+  line-height: normal;
+  resize: none;
+}
+.tblBox input[type=radio],
+.tblBox input[type=checkbox] {
+  margin-right: 5px;
+}
+.tblBox input[type=radio]:not(:first-child),
+.tblBox input[type=checkbox]:not(:first-child) {
+  margin-left: 20px;
+}
+
+.btnBox,
+.btnBox div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+}
+.btnBox {
+  margin-top: 20px;
+}
+.btnBox a,
+.btnBox input[type=button],
+.btnBox input[type=submit] {
+  min-width: 80px;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  font-size: 15px;
+  display: inline-block;
+}
+.btnBox a:nth-child(odd),
+.btnBox input[type=button]:nth-child(odd),
+.btnBox input[type=submit]:nth-child(odd) {
+  background: #ccc;
+  color: #222;
+}
+.btnBox a:nth-child(even),
+.btnBox input[type=button]:only-child,
+.btnBox input[type=submit]:nth-child(even),
+.btnBox a:only-child,
+.btnBox input[type=button]:nth-child(even),
+.btnBox input[type=submit]:only-child {
+  background: #222;
+  color: #fff;
+}
