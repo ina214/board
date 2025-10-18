@@ -12,8 +12,4 @@ public interface BoardMapper {
   // List<BoardDto> : 목록 반환
   // String : 사용불가. 지원하지 않음.
 
-  public int writeOk(BoardDto boardDto);
-  public BoardDto view(int id);
-  public void postReadnum(int id);
-  public List<BoardDto> list(int id);
 }

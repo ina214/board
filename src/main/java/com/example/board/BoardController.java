@@ -21,39 +21,25 @@ public class BoardController {
   
   @GetMapping("/")
   public String home() {
-      return "redirect:/list";
+    return "redirect:/list";
   }
   
   // 게시판 글 작성
   @GetMapping("/write")
-  public String write() {   // 요청할 내용이 없음
+  public String write() {
     return "/write";
   }
 
-  // 게시판 글 작성 후 저장 버튼 클릭시 실행
-  @PostMapping("/writeOk")
-  public String writeOk(BoardDto boardDto)
-  {
-    // BoardDto : 사용자가 입력한 정보를 BoardDto 객체에 바인딩
-    // HttpSession : 로그인 사용자 정보를 가져오기 위해 사용. (작성자 아이디를 함께 저장 가능)
-    return service.writeOk(boardDto);
-  }
-  
   // 게시판 글 보기
   @GetMapping("/view")
-  public String view(@RequestParam("id") int id, Model model)
+  public String view()
   {
-    return service.view(id, model);
-  }
-  // 조회수
-  @GetMapping("/postReadnum")
-  public String postReadnum(@RequestParam("id") int id) {
-      return service.postReadnum(id);
+    return "/view";
   }
   
   // 게시판 목록
   @GetMapping("/list")
-  public String list(@RequestParam("id") int id, Model model) {
-      return service.list(id, model);
+  public String list() {
+    return "/list";
   }
 }

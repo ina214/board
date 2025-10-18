@@ -46,16 +46,16 @@
         </thead>
         <tbody>
           <tr>
-            <td>${boardDto.title}</td>
-            <td>${boardDto.name}</td>
-            <td><fmt:formatDate value="${writedayDate}" pattern="yyyy-MM-dd" /></span></td>
-            <td>${boardDto.readnum}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="btnBox">
-      <a href="/write">글쓰기</a>
+      <a href="">글쓰기</a>
     </div>
   </div>
 </body>
